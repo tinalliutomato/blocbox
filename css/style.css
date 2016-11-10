@@ -7,7 +7,7 @@ body {
 	color: #333;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, a{
 	font-family: 'Nunito', Helvetica, Arial, sans-serif;
 }
 
@@ -46,3 +46,355 @@ p {
 	min-height: 1px;
 	margin: 0 2% 20px;
 }
+
+/* Media Queries */
+@media (min-width: 768px) {
+	.container {
+		width: 750px;
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+		width: 970px;
+	}
+	.one-half {
+		width: 46%;
+	}
+	.one-third {
+		width: 29.33333%;
+	}
+	.one-fourth {
+		width: 21%;
+	}
+}
+
+@media (min-width: 1280px) {
+	.container {
+		width: 1170px;
+	}
+}
+
+/* Header */
+header {
+	color: white;
+	background: #333333 url("../images/hero-bg.png") top center no-repeat;
+	background: url("../images/hero-bg.png") top center no-repeat, linear-gradient(-180deg, rgba(0,0,0,0.00) 20%, rgba(0,0,0,0.09) 97%);
+	background-size:cover;
+}
+header nav {
+	padding: 1em 0;
+}
+header nav ul{
+	display: inline;
+	float: right;
+	text-align: right;
+	margin: 0;
+}
+header nav ul > li {
+	display: inline-block;
+	list-style-type: none;
+	margin: 0 15px;
+}
+header nav ul > li.btn-outline {
+	padding: 10px 15px;
+	border: 2px solid #F1C40F;
+	border-radius: 4px;
+}
+header nav ul > li.btn-outline:hover {
+	background: #F1C40F;
+}
+header nav ul > li > a {
+	color: #F1C40F;
+	text-decoration: none;
+}
+header nav ul > li.btn-outline:hover > a {
+	color: #333;
+}
+header .hero {
+   text-align: center;
+   display:block;
+   position: relative;
+ }
+ header .hero h1 {
+   font-size:48px;
+   font-weight: normal;
+   margin:40px 0 0;
+ }
+ header .hero p {
+   font-size: 22px;
+   line-height: 26px;
+   font-weight: 100;
+   margin:10px 0 40px;
+ }
+ header .hero img {
+   display: block;
+   margin:3em auto 0;
+ }
+
+/* Buttons */
+.btn {
+   border-radius: 4px;
+   color:#FFFFFF;
+   font-weight: 700;
+   text-decoration: none;
+   padding:10px 30px;
+   background: #F1C40F;
+   border: 2px solid #F1C40F;
+   box-shadow: 0px 3px 0px 0px #CBA60D;
+ }
+
+ /* Benefits */
+ .benefits {
+	text-align: center;
+	display:block;
+	position:relative;
+	background-image: linear-gradient(-180deg, #7234A1 0%, #5C1F88 100%);
+ }
+ .benefits ul {
+   margin: 0 auto;
+   padding:4em 0;
+ }
+ .benefits ul li {
+   list-style-type: none;
+   display: inline-block;
+ }
+ .benefits i {
+   color:#FFF;
+   font-size:60px;
+   margin:0 0 20px;
+   vertical-align: middle;
+ }
+  .benefits h2, .benefits p {
+   color:#FFF;
+ }
+ .benefits p {
+ 	margin-top: 5px;
+ }
+
+ /* Use Cases Section */
+ .usecases {
+ 	padding: 5em 0;
+ 	text-align: center;
+ 	display:block;
+	position:relative;
+	background: #FFF url("../images/usecase-bg.png") top center no-repeat;
+	background-size:cover;
+ }
+
+ .usecases h1 {
+ 	color: #7234A1;
+ }
+ .usecases .general p {
+ 	color: #333;
+ }
+ .usecase {
+ 	margin: 10em auto 0;
+ }
+ .usecase h3, .usecase p {
+ 	color: white;
+ }
+ .buttons {
+ 	text-align: center;
+ 	padding: 2em 0;
+	margin: 0;
+ }
+ .buttons > li {
+ 	display: inline-block;
+ 	padding: 10px 15px;
+	list-style-type: none;
+	margin: 0 15px;
+ }
+ .buttons > li.btn-outline {
+	border: 2px solid #7234A1;
+	border-radius: 4px;
+ }
+ .buttons > li a {
+ 	text-decoration: none;
+ }
+
+ /* Pricing */
+ .pricing {
+   background: #7234A1 url("../images/pricing-bg.png") top center no-repeat;
+   background: url("../images/pricing-bg.png") top center no-repeat, linear-gradient(-180deg, #7234A1 0%, #5C1F88 100%);
+   background-size:cover;
+   text-align: center;
+   padding:4em 0;
+ }
+ .pricing h2, .pricing p {
+   color:#FFFFFF;
+ }
+ .pricing ul {
+   margin:0 auto;
+   padding:2em 0;
+ }
+ .pricing ul li {
+   list-style-type: none;
+ }
+
+ .box {
+   padding:0 15px 15px;
+   background: #FFFFFF;
+   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.20);
+   position: relative;
+   margin-top: 25px;
+ }
+ .pricing .box {
+ 	min-height: 439px;
+ }
+ .box.middle {
+   min-height: 485px;
+   margin-top:0px;
+ }
+  .box h3 {
+   font-family: "Nunito", Helvetica, Arial, sans-serif;
+   font-weight: normal;
+   text-transform: uppercase;
+   background: #EAEAEA;
+   box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.40);
+   left:0;
+   right:0;
+   top:0;
+   text-align: center;
+   margin:0 -15px 40px;
+   padding:10px 0;
+ }
+ .box h4 {
+   font-size:50px;
+   font-weight: normal;
+   margin:20px 0 10px;
+   color:#7234A1;
+ }
+ .box h4 span {
+   font-size:25px;
+   vertical-align: top;
+ }
+ .box h4 span.month {
+   font-family: "Oxygen", Helvetica, Arial, sans-serif;
+   font-weight: 100;
+   color:#333;
+   font-size:20px;
+   vertical-align: middle;
+ }
+  .box ul li {
+   font-size:18px;
+   margin-bottom:20px;
+   font-weight: 100;
+ }
+
+ .box .btn {
+ 	position: absolute;
+    bottom:20px;
+   	left:20px;
+   	right:20px;
+ }
+ .small {
+   font-size: 12px;
+   color: #FEFEFE;
+   line-height: 15px;
+   font-style:italic;
+ }
+
+ /* Testimonials */
+ .testimonials {
+   padding:4em 0;
+   text-align: center;
+   background: #EAEAEA;
+ }
+ .testimonials h2 {
+   color: #7234A1;
+ }
+ .testimonials ul.container {
+ 	width: 1500px;
+ }
+ .testimonials ul li {
+   list-style-type: none;
+   display: inline-block;
+   width: 350px;
+   padding: 0 10px;
+ }
+  .testimonials blockquote {
+   color:#333;
+   font-weight: 100;
+   font-size: 18px;
+   line-height: 24px;
+   text-align: left;
+   position: relative;
+   width:auto;
+   margin:0;
+ }
+ .testimonials .box {
+ 	height: 400px;
+ }
+ .testimonials img {
+   height: 100px;
+   width: 100px;
+   border-radius:50%;
+   margin: 20px auto 0;
+ }
+  .testimonials p.name strong {
+   text-align: center;
+   color: #7234A1;
+ }
+
+ /* FOOTER */
+ footer {
+	background: #333333;
+	background-image: linear-gradient(-180deg, rgba(0,0,0,0.19) 0%, rgba(0,0,0,0.19) 100%);
+	color: #FFFFFF;
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+ }
+ .footer-nav-block {
+ 	padding-bottom: 2em;
+ }
+ footer p, footer nav ul {
+	font-size:14px;
+	font-weight: lighter;
+	line-height: 1.5;
+	margin: 10px auto 0;
+ }
+ footer p.copyright-block {
+ 	font-size: 12px;
+ 	font-weight: bold;
+ }
+ footer nav ul li {
+	list-style-type: none;
+	font-size: 12px;
+	display: inline;
+	border-right: 1px solid white;
+	padding: 0 10px;
+ }
+ footer nav ul li:last-of-type {
+ 	padding-right: 0;
+ 	border-right: 0;
+ }
+ footer nav ul li a {
+	color:#FFFFFF;
+	text-decoration: none;
+ }
+ footer .right-footer-block {
+   text-align: right;
+   vertical-align: bottom;
+ }
+ footer .logo {
+	padding: 2.35em 0 0.5em;
+	display: block;
+ }
+ footer .social-icons {
+ 	margin-top: 120px;
+ 	font-size: 40px;
+ 	color: #F1C40F;
+ 	letter-spacing: 10px;
+ }
+ .pull-bottom {
+ 	position: absolute;
+    bottom:20px;
+ }
+ .pull-right {
+ 	position: absolute;
+ 	right: 0;
+ 	margin-right: 15px;
+ 	padding-right: 2%;
+ }
