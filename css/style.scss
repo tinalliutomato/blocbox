@@ -29,17 +29,17 @@ body {
 h1, h2, h3, h4, h5, h6, a{
 	font-family: $hfonts;
 }
+h1 {
+   font-weight: normal;
+}
 
 h2 {
-	font-size: 28px;
-	font-weight: normal;
-	margin: 5px;
+   font-weight: normal;
+   margin: 5px;
 }
 
 p {
-	font-size: 16px;
-	line-height: 24px;
-	font-weight: normal;
+   font-weight: normal;
 }
 
 /* Grid */
@@ -75,6 +75,19 @@ p {
 	.container {
 		width: 750px;
 	}
+   h1 {
+      font-size:36px;
+   }
+
+   h2 {
+      font-size: 20px;
+      margin: 3px;
+   }
+
+   p {
+      font-size: 14px;
+      line-height: 20px;
+   }
 }
 
 @media (min-width: 992px) {
@@ -87,6 +100,20 @@ p {
 	.one-fourth {
 		width: 21%;
 	}
+
+   h1 {
+      font-size:48px;
+   }
+
+   h2 {
+      font-size: 28px;
+      margin: 5px;
+   }
+
+   p {
+      font-size: 16px;
+      line-height: 24px;
+   }
 }
 
 @media (min-width: 1280px) {
@@ -110,26 +137,37 @@ header nav ul{
 	float: right;
 	text-align: right;
 	margin: 0;
+   padding: 0;
 }
 header nav ul > li {
 	display: inline-block;
 	list-style-type: none;
-	margin: 0 15px;
+	margin: 0 0 0 15px;
+   padding: 10px 15px;
+   border: 2px solid transparent;
+   border-radius: 4px;
 }
+
+@media (max-width: 600px) {
+   header nav ul > li {
+      margin: 0 0 0 10px;
+      padding: 10px;
+      font-size: 14px;
+   }
+}
+
 header nav ul > li.btn-outline {
-	padding: 10px 15px;
-	border: 2px solid $accent-color-1;
-	border-radius: 4px;
+	border-color: $accent-color-1;
 }
 header nav ul > li.btn-outline:hover {
-	background: $accent-color-1;
+	background: rgba($accent-color-1, 0.7);
 }
 header nav ul > li > a {
 	color: $accent-color-1;
 	text-decoration: none;
 }
 header nav ul > li.btn-outline:hover > a {
-	color: #333;
+	color: $black;
 }
 header .hero {
    text-align: center;
@@ -137,8 +175,6 @@ header .hero {
    position: relative;
  }
  header .hero h1 {
-   font-size:48px;
-   font-weight: normal;
    margin:40px 0 0;
  }
  header .hero p {
@@ -379,6 +415,18 @@ header .hero {
 	overflow: hidden;
 	z-index: 0;
  }
+
+ @media (max-width: 600px) {
+   footer .one-half{
+      width: 100%;
+   }
+   .left-footer-block {
+      text-align: center;
+   }
+   img.logo {
+      margin: 0 auto;
+   }
+}
  .footer-nav-block {
  	padding-bottom: 2em;
  }
