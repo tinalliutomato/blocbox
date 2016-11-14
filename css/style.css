@@ -181,13 +181,19 @@ header .hero img {
   font-size: 60px;
   margin: 0 0 20px;
   vertical-align: middle; }
-
 .benefits h2, .benefits p {
   color: white; }
-
 .benefits p {
   margin-top: 5px; }
 
+@media (max-width: 991px) and (min-width: 450px) {
+  .benefits i {
+    width: 40%;
+    float: left; }
+  .benefits h2, .benefits p {
+    text-align: left;
+    width: 60%;
+    margin-left: 40%; } }
 /* Use Cases Section */
 .usecases {
   padding: 5em 0;

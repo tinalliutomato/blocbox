@@ -224,18 +224,35 @@ header .hero {
    list-style-type: none;
    display: inline-block;
  }
- .benefits i {
-   color: $text-color-light;
-   font-size:60px;
-   margin:0 0 20px;
-   vertical-align: middle;
- }
-  .benefits h2, .benefits p {
-   color: $text-color-light;
- }
- .benefits p {
- 	margin-top: 5px;
- }
+
+.benefits {
+   i {
+      color: $text-color-light;
+      font-size:60px;
+      margin:0 0 20px;
+      vertical-align: middle;
+   }
+   h2, p {
+      color: $text-color-light;
+   }
+   p {
+      margin-top: 5px;
+   }
+}
+
+@media (max-width: 991px) and (min-width: 450px){
+   .benefits {
+      i {
+         width: 40%;
+         float: left;
+      }
+      h2, p {
+         text-align: left;
+         width: 60%;
+         margin-left: 40%;
+      }
+   }
+}
 
  /* Use Cases Section */
  .usecases {
@@ -480,7 +497,7 @@ header .hero {
    }
  }
 
- @media (max-width: 750px) {
+@media (max-width: 750px) {
    img.logo {
       margin: 0 auto;
    }
