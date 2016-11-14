@@ -505,7 +505,9 @@ header .hero {
    footer {
       table td {
          text-align: center;
-
+         display: block;
+         width: 100%;
+         
          .pull-right {
             float: none;
          }

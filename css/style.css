@@ -410,7 +410,9 @@ footer {
     margin: 0 auto; }
 
   footer table td {
-    text-align: center; }
+    text-align: center;
+    display: block;
+    width: 100%; }
     footer table td .pull-right {
       float: none; } }
 
