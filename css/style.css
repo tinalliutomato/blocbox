@@ -420,7 +420,7 @@ footer {
   background: #eaeaea; }
 
 .hamburger {
-  position: absolute;
+  position: fixed;
   z-index: 1000;
   background: transparent;
   color: #b3b3b3;
@@ -441,7 +441,7 @@ footer {
 .left-nav {
   height: 100%;
   width: 280px;
-  position: absolute;
+  position: fixed;
   display: block;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -555,16 +555,19 @@ footer {
     vertical-align: top;
     padding-top: 8px;
     font-weight: normal;
-    margin: 0 0 0 10px; }
-  .left-nav .settings a {
+    margin: 0 0 0 10px;
+    color: white; }
+  .left-nav .settings .setting-btn {
     color: white;
     text-decoration: none;
     text-align: right;
     float: right;
     margin-right: 10px;
-    margin-top: 8px;
-    line-height: 24px; }
-    .left-nav .settings a:hover {
+    line-height: 35px;
+    position: absolute;
+    bottom: 0;
+    right: 0; }
+    .left-nav .settings .setting-btn:hover {
       color: #F1C40F; }
 
 /* CONTENT AREA */

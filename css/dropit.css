@@ -11,16 +11,16 @@
 .dropit {
   list-style: none;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  z-index: 10; }
 
-.menu {
+.add-menu {
   position: fixed;
   display: block;
   width: 150px;
   height: 200px;
   bottom: 20px;
-  right: 30px;
-  z-index: 10; }
+  right: 30px; }
 
 .dropit .dropit-trigger {
   position: absolute;
@@ -58,6 +58,8 @@
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg); }
+.dropit-open .setting-btn i {
+  color: #F1C40F; }
 
 .dropit .dropit-open .dropit-submenu:after {
   content: " ";
@@ -73,5 +75,16 @@
 
 .dropit .dropit-open .dropit-submenu {
   display: block; }
+
+.setting-menu {
+  position: absolute;
+  display: block;
+  width: 180px;
+  height: 170px;
+  bottom: 10px;
+  right: 0; }
+  .setting-menu .dropit-submenu {
+    right: -18px;
+    left: auto; }
 
 /*# sourceMappingURL=dropit.css.map */

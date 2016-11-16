@@ -521,7 +521,7 @@ header .hero {
  }
 
 .hamburger {
-   position: absolute;
+   position: fixed;
    z-index: 1000;
    background: transparent;
    color: lighten($black, 50%);
@@ -546,7 +546,7 @@ header .hero {
 .left-nav {
    height: 100%;
    width: 280px;
-   position: absolute;
+   position: fixed;
    display:block;
    -webkit-transition: all 0.3s ease-in-out;
    -moz-transition: all 0.3s ease-in-out;
@@ -674,16 +674,19 @@ header .hero {
          padding-top: 8px;
          font-weight: normal;
          margin:0 0 0 10px;
+         color: white;
       }
 
-      a {
+      .setting-btn {
          color: white;
          text-decoration: none;
          text-align: right;
          float: right;
          margin-right:10px;
-         margin-top:8px;
-         line-height: 24px;
+         line-height: 35px;
+         position: absolute;
+         bottom: 0;
+         right: 0;
          
          &:hover {
             color: $accent-color-1;
