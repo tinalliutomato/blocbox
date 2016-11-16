@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/font-awesome.css">
 	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/dropit.css">
 </head>
 
 <body class="dashboard">
@@ -42,13 +43,18 @@
 </nav>
 
 <main role="main">
-   <!-- Benefits -->
+   <!--<a href="#" class="btn add-btn"><i class="fa fa-plus"></i></a>-->
+   <ul class="menu">
+    <li>
+      <a href="#" class="btn add-btn" id="add_new_btn"><i class="fa fa-plus"></i></a>
+      <ul>
+          <li><a href="#"><i class="fa fa-file-o"></i> Note</a></li>
+          <li><a href="#"><i class="fa fa-picture-o"></i> Image</a></li>
+          <li><a href="#"><i class="fa fa-link"></i> Link</a></li>
+      </ul>
+    </li>
+   </ul>
    <section class="content">
-     <div class="container">
-       <div class="header">
-         <a href="#" class="btn"><i class="fa fa-plus"></i> Add</a>
-       </div>
-     </div>
      <div class="container">
 	     <div class="header">
 	     <h1><i class="fa fa-th-large"></i>All Items<span class="items_label">(36 items)</span></h1>
@@ -122,6 +128,10 @@
      </div>
    </section>
 </main>
-
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/dropit.js"></script>
+<script type="text/javascript">
+	$(".menu").dropit();
+</script>
 </body>
 </html>
