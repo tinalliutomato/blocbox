@@ -459,11 +459,10 @@ footer {
           .left-nav .items ul li a:hover {
             color: #F1C40F; }
           .left-nav .items ul li a.selected {
-            -moz-box-shadow: inset 0 0 15px #292929;
-            -webkit-box-shadow: inset 0 0 15px #292929;
-            box-shadow: inset 0 0 15px #292929;
-            background: #2b2b2b;
-            font-weight: normal;
+            -moz-box-shadow: inset 0 0 5px #2b2b2b;
+            -webkit-box-shadow: inset 0 0 5px #2b2b2b;
+            box-shadow: inset 0 0 5px #2b2b2b;
+            background: #2e2e2e;
             color: #F1C40F; }
   .left-nav .settings {
     position: absolute;
@@ -494,7 +493,7 @@ footer {
       margin-top: 8px;
       line-height: 24px; }
       .left-nav .settings a:hover {
-        color: #f5d657; }
+        color: #F1C40F; }
 
 /* CONTENT AREA */
 .content {

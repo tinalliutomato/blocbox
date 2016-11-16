@@ -572,11 +572,10 @@ header .hero {
                }
 
                &.selected {
-                  -moz-box-shadow:    inset 0 0 15px darken($black, 4%);
-                  -webkit-box-shadow: inset 0 0 15px darken($black, 4%);
-                  box-shadow:         inset 0 0 15px darken($black, 4%);
-                  background: darken($black, 3%);
-                  font-weight: normal;
+                  -moz-box-shadow:    inset 0 0 5px darken($black, 3%);
+                  -webkit-box-shadow: inset 0 0 5px darken($black, 3%);
+                  box-shadow:         inset 0 0 5px darken($black, 3%);
+                  background: darken($black, 2%);
                   color: $accent-color-1;
                }
             }
@@ -619,7 +618,7 @@ header .hero {
          line-height: 24px;
          
          &:hover {
-            color: lighten($accent-color-1, 15%);
+            color: $accent-color-1;
          }
        }
    }
