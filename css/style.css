@@ -419,81 +419,153 @@ footer {
 .dashboard {
   background: #eaeaea; }
 
+.hamburger {
+  position: absolute;
+  z-index: 1000;
+  background: transparent;
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 22px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  left: 5px;
+  top: 15px; }
+  .hamburger:hover {
+    background: #dddddd; }
+  .hamburger:active {
+    background: #d1d1d1; }
+  .hamburger.menu-open, .hamburger.menu-open:active {
+    background: #333333;
+    color: #F1C40F; }
+
 .left-nav {
-  height: 100vh;
-  width: 14.66666667%;
-  color: white;
+  height: 100%;
+  width: 280px;
+  position: absolute;
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  transform: translate(-280px, 0);
+  -webkit-transform: translate(-280px, 0);
+  /** Chrome & Safari **/
+  -o-transform: translate(-280px, 0);
+  /** Opera **/
+  -moz-transform: translate(-280px, 0);
+  /** Firefox **/
   background: #333333;
-  background-image: linear-gradient(-90deg, rgba(51, 51, 51, 0) 50%, rgba(51, 51, 51, 0.09) 100%);
-  float: left;
-  position: fixed;
-  display: block; }
-  .left-nav .site-logo {
-    padding: 20px;
+  background-image: linear-gradient(-90deg, rgba(51, 51, 51, 0) 50%, #363636 100%); }
+
+.left-nav.open {
+  /*-webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; */
+  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  /** Chrome & Safari **/
+  -o-transform: translate(0, 0);
+  /** Opera **/
+  -moz-transform: translate(0, 0);
+  /** Firefox **/
+  z-index: 100; }
+
+@media (min-width: 992px) {
+  .left-nav {
+    height: 100vh;
+    width: 14.66666667%;
+    color: white;
+    background: #333333;
+    background-image: linear-gradient(-90deg, rgba(51, 51, 51, 0) 50%, rgba(51, 51, 51, 0.09) 100%);
+    float: left;
+    position: fixed;
     display: block;
-    text-align: center; }
-  .left-nav .items {
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    /** Chrome & Safari **/
+    -o-transform: translate(0, 0);
+    /** Opera **/
+    -moz-transform: translate(0, 0);
+    /** Firefox **/ }
+
+  .left-nav.open {
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    /** Chrome & Safari **/
+    -o-transform: translate(0, 0);
+    /** Opera **/
+    -moz-transform: translate(0, 0);
+    /** Firefox **/ }
+
+  .hamburger {
+    display: none; } }
+.left-nav .site-logo {
+  padding: 20px;
+  display: block;
+  text-align: center; }
+.left-nav .items {
+  padding: 0; }
+  .left-nav .items p {
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: white;
+    line-height: 15px;
+    padding: 0 6%; }
+  .left-nav .items ul {
+    margin: 10px 0 40px;
     padding: 0; }
-    .left-nav .items p {
-      font-weight: lighter;
-      text-transform: uppercase;
-      font-size: 12px;
-      color: white;
-      line-height: 15px;
-      padding: 0 6%; }
-    .left-nav .items ul {
-      margin: 10px 0 40px;
-      padding: 0; }
-      .left-nav .items ul li {
-        list-style-type: none; }
-        .left-nav .items ul li a {
-          color: white;
-          text-decoration: none;
-          font-weight: lighter;
-          display: block;
-          padding: 8px 6%; }
-          .left-nav .items ul li a i {
-            width: 16px;
-            text-align: center;
-            margin-right: 8px; }
-          .left-nav .items ul li a:hover {
-            color: #F1C40F; }
-          .left-nav .items ul li a.selected {
-            -moz-box-shadow: inset 0 0 5px #2b2b2b;
-            -webkit-box-shadow: inset 0 0 5px #2b2b2b;
-            box-shadow: inset 0 0 5px #2b2b2b;
-            background: #2e2e2e;
-            color: #F1C40F; }
-  .left-nav .settings {
-    position: absolute;
-    background: rgba(51, 51, 51, 0.1);
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 10px 0; }
-    .left-nav .settings img {
-      height: 35px;
-      width: 35px;
-      border-radius: 50%;
-      margin-left: 10px;
-      display: inline-block; }
-    .left-nav .settings p {
-      display: inline-block;
-      vertical-align: top;
-      padding-top: 8px;
-      font-weight: normal;
-      margin: 0 0 0 10px; }
-    .left-nav .settings a {
-      color: white;
-      text-decoration: none;
-      text-align: right;
-      float: right;
-      margin-right: 10px;
-      margin-top: 8px;
-      line-height: 24px; }
-      .left-nav .settings a:hover {
-        color: #F1C40F; }
+    .left-nav .items ul li {
+      list-style-type: none; }
+      .left-nav .items ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: lighter;
+        display: block;
+        padding: 8px 6%; }
+        .left-nav .items ul li a i {
+          width: 16px;
+          text-align: center;
+          margin-right: 8px; }
+        .left-nav .items ul li a:hover {
+          color: #F1C40F; }
+        .left-nav .items ul li a.selected {
+          -moz-box-shadow: inset 0 0 5px #2b2b2b;
+          -webkit-box-shadow: inset 0 0 5px #2b2b2b;
+          box-shadow: inset 0 0 5px #2b2b2b;
+          background: #2e2e2e;
+          color: #F1C40F; }
+.left-nav .settings {
+  position: absolute;
+  background: rgba(51, 51, 51, 0.1);
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 0; }
+  .left-nav .settings img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin-left: 10px;
+    display: inline-block; }
+  .left-nav .settings p {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 8px;
+    font-weight: normal;
+    margin: 0 0 0 10px; }
+  .left-nav .settings a {
+    color: white;
+    text-decoration: none;
+    text-align: right;
+    float: right;
+    margin-right: 10px;
+    margin-top: 8px;
+    line-height: 24px; }
+    .left-nav .settings a:hover {
+      color: #F1C40F; }
 
 /* CONTENT AREA */
 .add-btn {
